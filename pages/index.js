@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+import { useRouter } from 'next/router';
 
 import configs from '../configs.json';
 
@@ -10,6 +12,9 @@ import QuizLogo from '../src/components/QuizLogo';
 import Widget from '../src/components/Widget';
 
 export default function Home() {
+  const router = useRouter();
+  const [playerName, setPlayerName] = useState('');
+
   return (
     <BackgroundImage backgroundImage={configs.bg}>
       <QuizContainer>
@@ -20,6 +25,19 @@ export default function Home() {
           </Widget.Header>
           <Widget.Content>
             <p>{configs.description}</p>
+
+            <form onSubmit={(e) => {
+              e.preventDefault();
+
+              router.push(`/quiz?name=${playerName}`);
+            }}
+            >
+              <input placeholder="Qual seu nome?" onChange={(e) => { setPlayerName(e.target.value); }} />
+
+              <button type="submit" disabled={playerName.length === 0}>
+                Olá! Vamos jogar?
+              </button>
+            </form>
           </Widget.Content>
         </Widget>
         <Footer />
