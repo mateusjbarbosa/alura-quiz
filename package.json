@@ -1,6 +1,7 @@
 {
-  "name": "imersao-react-next-alura-quiz",
-  "version": "1.1.0",
+  "name": "b3_2020_alura_quiz",
+  "version": "1.0.0",
+  "description": "Projeto criado na Imersão React e Next.js 2021, promovido pela Alura Cursos. O objetivo do projeto é a geração de um quiz, o qual os participantes definem o tema de suas criações. No meu caso, escolhi o tema B3 2020.",
   "scripts": {
     "dev": "next",
     "build": "next build",
