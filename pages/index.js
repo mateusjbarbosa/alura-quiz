@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import configs from '../configs.json'
 
 import Widget from '../src/components/Widget'
+import Footer from '../src/components/Footer'
 
 const BackgroundImage = styled.div`
   background-image: url(${configs.bg});
@@ -35,6 +36,8 @@ export default function Home() {
           </Widget.Content>
         </Widget>
       </QuizContainer>
+
+      <Footer />
     </BackgroundImage>
   )
 }
