@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const BackgroundImage = styled.div`
   width: 100%;
@@ -15,8 +15,10 @@ const BackgroundImage = styled.div`
       content: "";
       background-size: cover;
       background-position: center;
-      background-image:
-        linear-gradient(transparent, ${({ theme }) => theme.colors.mainBg}),
+      background-image: linear-gradient(
+          transparent,
+          ${({ theme }) => theme.colors.mainBg}
+        ),
         url(${({ backgroundImage }) => backgroundImage});
       display: block;
       width: 100%;
@@ -33,6 +35,6 @@ const BackgroundImage = styled.div`
       z-index: 10;
     }
   }
-`
+`;
 
-export default BackgroundImage
+export default BackgroundImage;
