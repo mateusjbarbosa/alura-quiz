@@ -4,6 +4,7 @@ import configs from '../configs.json'
 
 import Widget from '../src/components/Widget'
 import Footer from '../src/components/Footer'
+import GithubCorner from '../src/components/GithubCorner'
 
 const BackgroundImage = styled.div`
   background-image: url(${configs.bg});
@@ -35,9 +36,10 @@ export default function Home() {
             <p>{configs.description}</p>
           </Widget.Content>
         </Widget>
+        <Footer />
       </QuizContainer>
 
-      <Footer />
+      <GithubCorner projectUrl="https://github.com/mateusjbarbosa/b3_2020_alura_quiz" />
     </BackgroundImage>
   )
 }
