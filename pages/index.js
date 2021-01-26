@@ -1,10 +1,16 @@
 import styled from 'styled-components'
 
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
+import configs from '../configs.json'
+
+const BackgroundImage = styled.div`
+  background-image: url(${configs.bg});
+  background-size: cover;
+  background-position: center;
+  flex: 1;
 `
 
 export default function Home() {
-  return <Title>My page</Title>
+  return (
+    <BackgroundImage></BackgroundImage>
+  )
 }
