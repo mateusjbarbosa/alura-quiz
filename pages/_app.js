@@ -1,8 +1,10 @@
-import Head from "next/head";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
-import { createGlobalStyle, ThemeProvider } from "styled-components";
+import Head from 'next/head';
 
-import configs from "../configs.json";
+import configs from '../configs.json';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -26,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const theme = configs.theme;
+const { theme } = configs;
 
 export default function App({ Component, pageProps }) {
   return (
@@ -41,8 +43,13 @@ export default function App({ Component, pageProps }) {
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Component {...pageProps} />
+        <Component pageProps={pageProps} />
       </ThemeProvider>
     </>
   );
 }
+
+App.propTypes = {
+  pageProps: PropTypes.shape({}).isRequired,
+  Component: PropTypes.elementType.isRequired,
+};

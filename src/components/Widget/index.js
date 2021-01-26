@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import configs from "../../../configs.json";
+import configs from '../../../configs.json';
 
 const Widget = styled.div`
   margin-top: 24px;
