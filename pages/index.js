@@ -5,13 +5,7 @@ import configs from '../configs.json'
 import Widget from '../src/components/Widget'
 import Footer from '../src/components/Footer'
 import GithubCorner from '../src/components/GithubCorner'
-
-const BackgroundImage = styled.div`
-  background-image: url(${configs.bg});
-  background-size: cover;
-  background-position: center;
-  flex: 1;
-`
+import BackgroundImage from '../src/components/BackgroundImage'
 
 const QuizContainer = styled.div`
   width: 100%;
@@ -26,7 +20,7 @@ const QuizContainer = styled.div`
 
 export default function Home() {
   return (
-    <BackgroundImage>
+    <BackgroundImage backgroundImage={configs.bg}>
       <QuizContainer>
         <Widget>
           <Widget.Header>
