@@ -5,8 +5,10 @@ import { useRouter } from 'next/router';
 import configs from '../configs.json';
 
 import BackgroundImage from '../src/components/BackgroundImage';
+import Button from '../src/components/Button';
 import Footer from '../src/components/Footer';
 import GithubCorner from '../src/components/GithubCorner';
+import Input from '../src/components/Input';
 import QuizContainer from '../src/components/QuizContainer';
 import QuizLogo from '../src/components/QuizLogo';
 import Widget from '../src/components/Widget';
@@ -32,11 +34,11 @@ export default function Home() {
               router.push(`/quiz?name=${playerName}`);
             }}
             >
-              <input placeholder="Qual seu nome?" onChange={(e) => { setPlayerName(e.target.value); }} />
+              <Input name="playerName" placeholder="Qual seu nome?" value={playerName} onChange={(e) => { setPlayerName(e.target.value); }} />
 
-              <button type="submit" disabled={playerName.length === 0}>
+              <Button type="submit" disabled={playerName.length === 0}>
                 Olá! Vamos jogar?
-              </button>
+              </Button>
             </form>
           </Widget.Content>
         </Widget>
