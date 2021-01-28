@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { useRouter } from 'next/router';
 
-import configs from '../configs.json';
+import db from '../db.json';
 
 import BackgroundImage from '../src/components/BackgroundImage';
 import Button from '../src/components/Button';
@@ -18,15 +18,15 @@ export default function HomePage() {
   const [playerName, setPlayerName] = useState('');
 
   return (
-    <BackgroundImage backgroundImage={configs.bg}>
+    <BackgroundImage backgroundImage={db.bg}>
       <QuizContainer>
         <QuizLogo />
         <Widget>
           <Widget.Header>
-            <h1>{configs.title}</h1>
+            <h1>{db.title}</h1>
           </Widget.Header>
           <Widget.Content>
-            <p>{configs.description}</p>
+            <p>{db.description}</p>
 
             <form onSubmit={(e) => {
               e.preventDefault();

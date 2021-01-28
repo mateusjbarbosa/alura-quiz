@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
-import configs from '../configs.json';
+import db from '../db.json';
 
 import AlternativesForm from '../src/components/AlternativesForm';
 import Widget from '../src/components/Widget';
@@ -147,9 +147,9 @@ export default function QuizPage() {
   const [screenState, setScreenState] = useState(screenStates.LOADING);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [results, setResults] = useState([]);
-  const totalQuestions = configs.questions.length;
+  const totalQuestions = db.questions.length;
   const questionIndex = currentQuestion;
-  const question = configs.questions[questionIndex];
+  const question = db.questions[questionIndex];
 
   function addResult(result) {
     setResults([
@@ -174,7 +174,7 @@ export default function QuizPage() {
   }
 
   return (
-    <BackgroundImage backgroundImage={configs.bg}>
+    <BackgroundImage backgroundImage={db.bg}>
       <QuizContainer>
         <QuizLogo />
         {screenState === screenStates.QUIZ && (

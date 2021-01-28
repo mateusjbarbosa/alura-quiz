@@ -4,7 +4,7 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
 import Head from 'next/head';
 
-import configs from '../configs.json';
+import db from '../db.json';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -28,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const { theme } = configs;
+const { theme } = db;
 
 export default function App({ Component, pageProps }) {
   return (

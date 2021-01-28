@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-import configs from '../../../configs.json';
+import db from '../../../db.json';
 
 const Widget = styled.div`
   margin-top: 24px;
   margin-bottom: 24px;
   border: 1px solid ${({ theme }) => theme.colors.primary};
   background-color: ${({ theme }) => theme.colors.mainBg};
-  border-radius: ${configs.borderRadius};
+  border-radius: ${db.borderRadius};
   overflow: hidden;
 
   h1,
