@@ -13,7 +13,7 @@ import QuizContainer from '../src/components/QuizContainer';
 import QuizLogo from '../src/components/QuizLogo';
 import Widget from '../src/components/Widget';
 
-export default function Home() {
+export default function HomePage() {
   const router = useRouter();
   const [playerName, setPlayerName] = useState('');
 
