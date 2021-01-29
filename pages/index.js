@@ -42,6 +42,28 @@ export default function HomePage() {
             </form>
           </Widget.Content>
         </Widget>
+
+        <Widget>
+          <Widget.Header>
+            <h1>Quizes da Galera</h1>
+          </Widget.Header>
+          <Widget.Content>
+            <ul>
+              {db.external.map((link) => {
+                const [projectName, user] = link.replace(/\//g, '').replace('https:', '').replace('.vercel.app', '').split('.');
+                const userProject = `${user}/${projectName}`;
+                return (
+                  <li>
+                    <Widget.Topic href={link}>
+                      {userProject}
+                    </Widget.Topic>
+                  </li>
+                );
+              })}
+            </ul>
+
+          </Widget.Content>
+        </Widget>
         <Footer />
       </QuizContainer>
 
