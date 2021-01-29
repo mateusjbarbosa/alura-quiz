@@ -9,7 +9,7 @@ import BackgroundImage from '../../components/BackgroundImage';
 import QuizContainer from '../../components/QuizContainer';
 import AlternativesForm from '../../components/AlternativesForm';
 import Button from '../../components/Button';
-// import BackLinkArrow from '../../components/BackLinkArrow';
+import BackLinkArrow from '../../components/BackLinkArrow';
 
 // import loadingAnimation from './animations/loading.json';
 
@@ -67,7 +67,7 @@ function QuestionWidget({
   return (
     <Widget>
       <Widget.Header>
-        {/* <BackLinkArrow href="/" /> */}
+        <BackLinkArrow href="/" />
         <h3>
           {`Pergunta ${questionIndex + 1} de ${totalQuestions}`}
         </h3>
