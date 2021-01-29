@@ -12,6 +12,7 @@ import Input from '../src/components/Input';
 import QuizContainer from '../src/components/QuizContainer';
 import QuizLogo from '../src/components/QuizLogo';
 import Widget from '../src/components/Widget';
+import Link from '../src/components/Link';
 
 export default function HomePage() {
   const router = useRouter();
@@ -53,8 +54,8 @@ export default function HomePage() {
                 const [projectName, user] = link.replace(/\//g, '').replace('https:', '').replace('.vercel.app', '').split('.');
                 const userProject = `${user}/${projectName}`;
                 return (
-                  <li>
-                    <Widget.Topic href={link}>
+                  <li key={userProject}>
+                    <Widget.Topic as={Link} href={link}>
                       {userProject}
                     </Widget.Topic>
                   </li>
