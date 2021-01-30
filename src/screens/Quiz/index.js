@@ -79,10 +79,6 @@ function LoadingWidget() {
       <Widget.Header>
         Carregando...
       </Widget.Header>
-
-      <Widget.Content>
-        [Desafio do Loading]
-      </Widget.Content>
     </Widget>
   );
 }
