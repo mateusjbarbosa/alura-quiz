@@ -52,7 +52,7 @@ export default function HomePage() {
             <form onSubmit={(e) => {
               e.preventDefault();
 
-              router.push(`/quiz?name=${playerName}`);
+              router.push(`/quiz?playerName=${playerName}`);
             }}
             >
               <Input name="playerName" placeholder="Qual seu nome?" value={playerName} onChange={(e) => { setPlayerName(e.target.value); }} />
