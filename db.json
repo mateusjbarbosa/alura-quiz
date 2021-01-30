@@ -1,45 +1,58 @@
 {
-  "bg": "https://www.hitalent.co/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMmJDQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1452099b706ad7d079f7a3a4dd5d702ebeeae45f/HiTalent.png",
-  "title": "Quiz JavaScript #AluraQuiz",
-  "description": "Um quiz rápido sobre o mundo do JavaScript",
+  "bg": "https://cdn.pixabay.com/photo/2017/06/09/16/19/money-2387280_960_720.jpg",
+  "title": "B3 2020 - A Bolsa de Valores durante a pandemia #AluraQuiz",
+  "description": "Um quiz rápido sobre o tudo que aconteceu no ano de 2020, o ano da pandemia, com a B3 (Brasil, Bolsa, Balcão), a Bolsa de Valores Brasileira.",
   "questions": [
     {
-      "image": "https://media.giphy.com/media/j5P0DQIOf4PonLi55G/giphy.gif",
-      "title": "Qual a diferença entre = , == e === ?",
-      "description": "Pergunta fácil em!",
-      "answer": 1,
+      "image": "https://media.giphy.com/media/xT5LMDYj4kvKNlGDHq/giphy.gif",
+      "title": "Qual foi a porcentagem (%) que a bolsa despencou no mês de março/2020?",
+      "description": "Quando os primeiros casos de covid-19 apareceram no mundo e a OMS declarou o estado de pandemia, as bolsas de valores do mundo despencaram, em especial a do Brasil. Fonte: Foco no milhão",
+      "answer": 3,
       "alternatives": [
-        "São a mesma coisa",
-        "O = significa atribuição de valor. Já == verifica a igualdade do valor, enquanto === verifica valor e tipo de variável."
+        "19,9%",
+        "21,9%",
+        "84,7%",
+        "29,9%",
+        "8,5%"
       ]
     },
     {
-      "image": "https://media.giphy.com/media/Ie2Hs3A0uJRtK/giphy.gif",
-      "title": "Que tipos de dados são suportados em JavaScript?",
-      "description": "E agora? Você sabe?",
+      "image": "https://media.giphy.com/media/zCpYQh5YVhdI1rVYpE/giphy.gif",
+      "title": "Ainda em março/2020, quantos circuit brakers aconteceram na B3?",
+      "description": "De uma forma bem direta, podemos dizer que circuit breaker é um mecanismo de segurança utilizado para interromper todas as operações. Este mecanismo é acionado nos momentos em que as ações negociadas nesse mercado sofrem grandes quedas consideradas atípicas em seus preços. Fonte: Blog - Toro Investimentos",
+      "answer": 2,
+      "alternatives": [
+        "1",
+        "2",
+        "5",
+        "7",
+        "12"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/d2lcHJTG5Tscg/giphy.gif",
+      "title": "Qual foi o ativo que mais se desvalorizou em 2020?",
+      "description": "2020 não foi fácil para ninguém, mas os gerentes dessa empresa, com certeza, não dormiram bem o ano todo! Fonte: seudinheiro.com",
       "answer": 0,
       "alternatives": [
-        "Number, String, Undefined, Null e Bool.",
-        "Int, String, Undefined, Null e Bool."
+        "IRB (IRBR3)",
+        "Cogna (COGN3)",
+        "Embraer (EMBR3)",
+        "Cielo (CIEL3)",
+        "CVC (CVC3)"
       ]
     },
     {
-      "image": "https://media.giphy.com/media/iI4vhciiVh2b3j9sgo/giphy.gif",
-      "title": "Qual a diferença de window e global?",
-      "answer": 1,
+      "image": "https://media.giphy.com/media/lptjRBxFKCJmFoibP3/giphy.gif",
+      "title": "E qual mais se valorizou em 2020?",
+      "description": "Se a empresa anterior está em maus bocados, essa aqui está nadando no dinheiro! Fonte: seudinheiro.com",
+      "answer": 3,
       "alternatives": [
-        "São a mesma coisa",
-        "window é o escopo global no browser, e global no node"
-      ]
-    },
-    {
-      "image": "https://media.giphy.com/media/iI4vhciiVh2b3j9sgo/giphy.gif",
-      "title": "Qual a forma antiga de trabalhar com AJAX na Web?",
-      "answer": 1,
-      "alternatives": [
-        "JSONHttpRequest",
-        "XMLHttpRequest",
-        "fetch"
+        "Weg (WEGE3)",
+        "PetroRio (PRIO3)",
+        "Magazine Luiza (MGLU3)",
+        "CSN (CSNA3)",
+        "Bradespar (BRAP4)"
       ]
     }
   ],
@@ -49,8 +62,8 @@
   ],
   "theme": {
     "colors": {
-      "primary": "#222222",
-      "secondary": "#e89c3f",
+      "primary": "#00695f",
+      "secondary": "#2979ff",
       "mainBg": "#213f4e",
       "contrastText": "#FFFFFF",
       "wrong": "#FF5722",
