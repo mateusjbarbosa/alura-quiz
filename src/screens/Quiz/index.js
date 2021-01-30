@@ -1,7 +1,7 @@
-/* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-// import { Lottie } from '@crello/react-lottie';
+
+import { motion } from 'framer-motion';
 
 import Widget from '../../components/Widget';
 import QuizLogo from '../../components/QuizLogo';
@@ -11,11 +11,27 @@ import AlternativesForm from '../../components/AlternativesForm';
 import Button from '../../components/Button';
 import BackLinkArrow from '../../components/BackLinkArrow';
 
-// import loadingAnimation from './animations/loading.json';
-
 function ResultWidget({ results }) {
   return (
-    <Widget>
+    <Widget
+      as={motion.section}
+      variants={{
+        show: {
+          opacity: 1,
+          y: '0',
+        },
+        hidden: {
+          opacity: 0,
+          y: '100%',
+        },
+      }}
+      initial="hidden"
+      animate="show"
+      transition={{
+        delay: 0,
+        duration: 0.5,
+      }}
+    >
       <Widget.Header>
         Resultado do Quiz
       </Widget.Header>
@@ -39,7 +55,25 @@ function ResultWidget({ results }) {
 
 function LoadingWidget() {
   return (
-    <Widget>
+    <Widget
+      as={motion.section}
+      variants={{
+        show: {
+          opacity: 1,
+          y: '0',
+        },
+        hidden: {
+          opacity: 0,
+          y: '100%',
+        },
+      }}
+      initial="hidden"
+      animate="show"
+      transition={{
+        delay: 0,
+        duration: 0.5,
+      }}
+    >
       <Widget.Header>
         Carregando...
       </Widget.Header>
@@ -65,7 +99,25 @@ function QuestionWidget({
   const hasAlternativeSelected = selectedAlternative !== undefined;
 
   return (
-    <Widget>
+    <Widget
+      as={motion.section}
+      variants={{
+        show: {
+          opacity: 1,
+          y: '0',
+        },
+        hidden: {
+          opacity: 0,
+          y: '100%',
+        },
+      }}
+      initial="hidden"
+      animate="show"
+      transition={{
+        delay: 0,
+        duration: 0.5,
+      }}
+    >
       <Widget.Header>
         <BackLinkArrow href="/" />
         <h3>
@@ -214,4 +266,9 @@ QuestionWidget.propTypes = {
 
 ResultWidget.propTypes = {
   results: PropTypes.arrayOf(PropTypes.bool).isRequired,
+};
+
+QuizPage.propTypes = {
+  externalQuestions: PropTypes.arrayOf(PropTypes.string).isRequired,
+  externalBg: PropTypes.string.isRequired,
 };
