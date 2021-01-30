@@ -11,7 +11,7 @@ import AlternativesForm from '../../components/AlternativesForm';
 import Button from '../../components/Button';
 import BackLinkArrow from '../../components/BackLinkArrow';
 
-function ResultWidget({ results }) {
+function ResultWidget({ results, playerName }) {
   return (
     <Widget
       as={motion.section}
@@ -38,14 +38,16 @@ function ResultWidget({ results }) {
 
       <Widget.Content>
         <h2>
-          {'Parabéns, [], você acertou '}
+          {`Parabéns, ${playerName}, você acertou `}
           {results.filter((pergunta) => pergunta === true).length}
+          {' de '}
+          {results.length}
           {' questões!'}
         </h2>
         <ul>
           {results.map((result, index) => (
             // eslint-disable-next-line react/jsx-one-expression-per-line
-            <li key={`result__${result}`}>Pergunta #{index + 1} - {result === true ? 'Acertou' : 'Errou'}</li>
+            <li key={`result__${index.toString()}`}>Pergunta #{index + 1} - {result === true ? 'Acertou' : 'Errou'}</li>
           ))}
         </ul>
       </Widget.Content>
@@ -198,7 +200,7 @@ const screenStates = {
   RESULT: 'RESULT',
 };
 
-export default function QuizPage({ externalQuestions, externalBg }) {
+export default function QuizPage({ externalQuestions, externalBg, playerName }) {
   const [screenState, setScreenState] = useState(screenStates.LOADING);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [results, setResults] = useState([]);
@@ -244,7 +246,8 @@ export default function QuizPage({ externalQuestions, externalBg }) {
 
         {screenState === screenStates.LOADING && <LoadingWidget />}
 
-        {screenState === screenStates.RESULT && <ResultWidget results={results} />}
+        {/* eslint-disable-next-line max-len */}
+        {screenState === screenStates.RESULT && <ResultWidget results={results} playerName={playerName} />}
       </QuizContainer>
     </BackgroundImage>
   );
@@ -266,9 +269,11 @@ QuestionWidget.propTypes = {
 
 ResultWidget.propTypes = {
   results: PropTypes.arrayOf(PropTypes.bool).isRequired,
+  playerName: PropTypes.string.isRequired,
 };
 
 QuizPage.propTypes = {
-  externalQuestions: PropTypes.arrayOf(PropTypes.string).isRequired,
+  externalQuestions: PropTypes.arrayOf(PropTypes.object).isRequired,
   externalBg: PropTypes.string.isRequired,
+  playerName: PropTypes.string.isRequired,
 };
